@@ -2,7 +2,6 @@
 #define VECTOR_H
 
 #include <stdlib.h>
-#include <stdio.h>
 
 typedef enum {
 	CHAR, INT, FLOAT, DOUBLE,

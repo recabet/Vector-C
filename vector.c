@@ -1,8 +1,8 @@
 #include "vector.h"
-
-vector* init(size_t cap, const type elem_type)
+#include <stdio.h>
+vector* init(const size_t cap, const type elem_type)
 {
-	vector* vec = (vector*) malloc(sizeof(vector));
+	vector* vec = malloc(sizeof(vector));
 	if(!vec)
 	{
 		perror("Failed to allocate memory for vector");
@@ -128,7 +128,7 @@ void pop_back(vector* vec)
 	}
 }
 
-void* get(vector* vec,int index)
+void* get(const vector* vec, const int index)
 {
 	if(index>vec->size||-index>vec->size)
 	{
@@ -151,7 +151,7 @@ void* get(vector* vec,int index)
 	}
 }
 
-char get_char(vector* vec, int index)
+char get_char(const vector* vec, const int index)
 {
 	if(index>vec->size||-index>vec->size)
 	{
@@ -166,7 +166,7 @@ char get_char(vector* vec, int index)
 	return ((char*)vec->data)[index];
 }
 
-int get_int(vector* vec, int index)
+int get_int(const vector* vec, const int index)
 {
 	if(index>vec->size||-index>vec->size)
 	{
@@ -181,7 +181,7 @@ int get_int(vector* vec, int index)
 	return ((int*)vec->data)[index];
 }
 
-float get_float(vector* vec, int index)
+float get_float(const vector* vec, const int index)
 {
 	if(index>vec->size||-index>vec->size)
 	{
@@ -196,7 +196,7 @@ float get_float(vector* vec, int index)
 	return ((float*)vec->data)[index];
 }
 
-double get_double(vector* vec, int index)
+double get_double(const vector* vec, const int index)
 {
 	if(index>vec->size||-index>vec->size)
 	{
